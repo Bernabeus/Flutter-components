@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class CardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('RICK AND MORTY APP'),
+      ),
       body: GridView.count(
         crossAxisCount: 2,
+        childAspectRatio: (150 / 190),
         children: <Widget>[
           cardR(),
-          Divider(),
+          cardR(),
+          cardR(),
+          cardR(),
           cardR(),
           cardR(),
           cardR(),
@@ -36,7 +40,7 @@ class cardR extends StatelessWidget {
             image: NetworkImage(
                 'https://rickandmortyapi.com/api/character/avatar/193.jpeg'),
           ),
-          Container(child: Text('No se que poner')),
+          Container(child: Text('NAME')),
           Container(
             width: 100,
             padding: EdgeInsets.all(10.0),
