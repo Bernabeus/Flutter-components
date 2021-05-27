@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'RICK AND MORTY App',
-      initialRoute: 'information',
+      initialRoute: 'cards',
       routes: appRoutes,
     );
   }
