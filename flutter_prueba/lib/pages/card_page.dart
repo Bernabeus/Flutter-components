@@ -10,6 +10,7 @@ class CardPage extends StatelessWidget {
         crossAxisCount: 2,
         children: <Widget>[
           cardR(),
+          Divider(),
           cardR(),
           cardR(),
           cardR(),
@@ -25,21 +26,29 @@ class cardR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 300.0,
         child: Padding(
-          padding: EdgeInsets.all(10.0),
-          child: Center(
-              child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Image(
-                image: NetworkImage(
-                    'https://rickandmortyapi.com/api/character/avatar/193.jpeg'),
-              ),
-              Container(
-                  padding: EdgeInsets.all(10.0), child: Text('No se que poner'))
-            ],
-          )),
-        ));
+      padding: EdgeInsets.all(10.0),
+      child: Center(
+          child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          Image(
+            image: NetworkImage(
+                'https://rickandmortyapi.com/api/character/avatar/193.jpeg'),
+          ),
+          Container(child: Text('No se que poner')),
+          Container(
+            width: 100,
+            padding: EdgeInsets.all(10.0),
+            child: Text(
+              'Alive',
+              style: TextStyle(color: Colors.black),
+            ),
+            decoration: BoxDecoration(
+                color: Colors.grey, borderRadius: BorderRadius.circular(20)),
+          ),
+        ],
+      )),
+    ));
   }
 }
